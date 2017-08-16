@@ -1,16 +1,16 @@
-def my_select(collection)
+def my_select(array)
+  fixed = []
+
   i = 0
 
-  new_array = []
-
-  while i < collection.length
-    if yield(collection[i]) == true
-      new_array.push(collection[i])
+  while i < array.length
+    if yield(array[i])
+      fixed << array[i]
     end
     i += 1
   end
-
-  return new_array
+  puts fixed
+  return fixed
 
 end
 
